@@ -1,0 +1,48 @@
+body{
+  background-color: #FFC700;
+  color: #170202;
+}
+
+.hero{
+  background-color: #F56565;
+}
+
+h1{
+  color: #FFFFFF;
+  font-size: 48px;
+  font-family: "Alfa Slab One", serif;
+}
+
+h2{
+  color: #170202;
+  font-family: "Alfa Slab One", serif;
+  font-size: 34px;
+}
+
+p{
+  font-family: "Roboto", sans-serif;
+}
+
+.hero_paragraph{
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-size: 24px;
+}
+
+.btn{
+  text-transform: uppercase;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.card-header {
+  font-family: "Alfa Slab One", serif;
+  font-size: 18px;
+  color: #170202;
+}
+
+.card-text{
+  color: #170202;
+}

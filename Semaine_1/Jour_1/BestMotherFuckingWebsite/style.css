@@ -1,0 +1,253 @@
+html{
+    display: block;
+}
+
+:root {
+  /* Dark mode if checked */
+  &:has(input[type="checkbox"]:checked) {
+    color-scheme: dark;
+  }
+
+  /* Light mode if not checked */
+  &:not(:has(input[type="checkbox"]:checked)) {
+    color-scheme: light;
+  }
+
+  body {
+    font-family: Open sans-serif , Arial;
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 1em;
+    font-size: 16px;
+    line-height: 1.4;
+    hyphens: auto;
+    /* Different background for each mode */
+    background: light-dark(hsl(0 0% 100%), hsl(0 0% 0%));
+    /* Different contrasted color for each mode */
+    color: light-dark(contrast-color(hsl(0 0% 100%))), contrast-color(hsl(0 0.00% 27.06%));
+  }
+}
+
+label{
+    position: absolute;
+    top: 34px;
+    text-decoration: underline;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 0.8em;
+    border: 0px;
+    padding: 0px;
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+ul{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+}
+
+li{
+    display: list-item;
+    text-align: match-parent;
+}
+
+ul li img{
+    height: 1em;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p.st{
+    margin-top: -1em;
+}
+
+p.monospace_font{
+    font-family: monospace;
+    font-size: .9em;
+}
+
+span.dark_red_font{
+    color: #730000;
+}
+
+span.light_red_font{
+    color: #c0392b;
+    font-weight: 600;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+span.dark_blue_font{
+    cursor: not-allowed;
+    color: #00e;
+}
+
+span.purple_font{
+    color: #551a8b;
+}
+
+span.random_changing_colors{
+    -webkit-animation:name 3s infinite;
+}
+
+@keyframes name {
+    0% {color:magenta;}
+    50% {color:blue;}
+    100%{color:green}
+}
+
+small{
+    font-size: .4em;
+}
+
+a:visited{
+    color: #941352;
+}
+
+.square_gray{
+    color: #444;
+    font-weight: 700;
+}
+
+.square_gray::before{
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: .2em;
+    margin-right: .2em;
+    background-color: #444
+}
+
+.square_gray_bis{
+    color: #454545;
+    font-weight: 700;
+}
+
+.square_gray_bis::before{
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: .2em;
+    margin-right: .2em;
+    background-color: #454545;
+}
+
+.fancy_positioning::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+div.fancy_positioning div.left_column{
+    float: left;
+    width: 40%;
+    overflow: hidden;
+    margin-right: 1em;
+}
+
+div.fancy_positioning div.left_column img{
+    width: 100%;
+}
+
+.figcaption{
+    display: block;
+}
+
+div.fancy_positioning div.left_column figcaption{
+    font-size: .7em;
+}
+
+div.fancy_positioning div.left_column figure{
+    margin: 10px;
+}
+
+div.fancy_positioning div.right_column{
+    float: left;
+    width: 55%;
+}
+
+div.fancy_positioning div.right_column p:first-child{
+    margin-top: 0;
+}
+
+blockquote{
+    margin-left: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: block;
+    margin-block-start: 40px;
+    margin-inline-end: 40px;
+}
+
+blockquote span{
+    float: left;
+    /* margin-left: 1rem; */
+    padding-top: 1rem;
+}
+
+blockquote author{
+    display: block;
+    clear: both;
+    font-size: .6em;
+    margin-left: 2.4rem;
+    font-style: oblique;
+}
+
+blockquote author::before{
+    content: "- ";
+    margin-right: 1em;
+}
+
+blockquote::before{
+    font-family: 'Times New Roman', Times, serif;
+    content: open-quote;
+    font-size: 2.2em;
+    font-weight: 600;
+    float: left;
+    margin-top: 0;
+    margin-right: .2rem;
+    width: 1.2em;
+}
+
+blockquote::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+a.kopimi img.kopimi{
+    height: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
